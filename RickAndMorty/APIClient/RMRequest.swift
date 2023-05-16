@@ -7,6 +7,6 @@
 
 import Foundation
 
-class RMRequest{
+final class RMRequest{
     
 }
