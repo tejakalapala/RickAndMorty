@@ -13,8 +13,9 @@ final class RMRequest{
         static let baseUrl = "https://rickandmortyapi.com/api"
     }
    private let endpoint:RMEndPoint
-   private let pathComponents:[String]
+   private let pathComponents:[Set<String>]
    private let queryParameters:[URLQueryItem]
+    ///Constructed url for API in string format
     private var urlString :String{
         var string = Constants.baseUrl + "/" + endpoint.rawValue
         if !pathComponents.isEmpty{
@@ -23,16 +24,24 @@ final class RMRequest{
             })
         }
         if !queryParameters.isEmpty{
-            queryParameters.forEach({
-                string += "/\($0)"
-            })
+            string += "?"
+            let argumentString = queryParameters.compactMap({
+                guard let value = $0.value else{
+                    return nil
+                }
+                return "\($0.name)=\(value)"
+            }).joined(separator: "&")
+            string += argumentString
         }
         return string
     }
     public var url:URL? {
-        return nil
+        return URL(string: urlString)
     }
-    init(endpoint: RMEndPoint, pathComponents: [String] = [], queryParameters: [URLQueryItem] = []) {
+    public let httpMethod = "GET"
+    init(endpoint: RMEndPoint,
+         pathComponents: [Set<String>] = [],
+         queryParameters: [URLQueryItem] = []) {
         self.endpoint = endpoint
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
