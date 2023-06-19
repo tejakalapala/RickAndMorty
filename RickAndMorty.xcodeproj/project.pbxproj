@@ -35,6 +35,7 @@
 		B7E09722297BBEFB00355C1B /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E09721297BBEFB00355C1B /* RickAndMortyTests.swift */; };
 		B7E0972C297BBEFB00355C1B /* RickAndMortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0972B297BBEFB00355C1B /* RickAndMortyUITests.swift */; };
 		B7E0972E297BBEFB00355C1B /* RickAndMortyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0972D297BBEFB00355C1B /* RickAndMortyUITestsLaunchTests.swift */; };
+		B7EEFE182A40E5390053ED33 /* CharacterListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEFE172A40E5390053ED33 /* CharacterListViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		B7E09727297BBEFB00355C1B /* RickAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E0972B297BBEFB00355C1B /* RickAndMortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITests.swift; sourceTree = "<group>"; };
 		B7E0972D297BBEFB00355C1B /* RickAndMortyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7EEFE172A40E5390053ED33 /* CharacterListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,8 @@
 		B7E09709297BBEFA00355C1B /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				B7EEFE162A40E5130053ED33 /* ViewModels */,
+				B7EEFE152A40E4AD0053ED33 /* New Group */,
 				B7986CF329EC08E300A73CB7 /* APIClient */,
 				B7986CE329EBF5EF00A73CB7 /* Models */,
 				B7E09740297BC0CE00355C1B /* Resources */,
@@ -234,6 +238,21 @@
 				B7E0970A297BBEFA00355C1B /* AppDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B7EEFE152A40E4AD0053ED33 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B7EEFE162A40E5130053ED33 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B7EEFE172A40E5390053ED33 /* CharacterListViewViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +412,7 @@
 				B7986CF929EC0A5D00A73CB7 /* RMEndpoint.swift in Sources */,
 				B7986CEC29EBF72000A73CB7 /* RMCharacterViewController.swift in Sources */,
 				B7986CF729EC092400A73CB7 /* RMRequest.swift in Sources */,
+				B7EEFE182A40E5390053ED33 /* CharacterListViewViewModel.swift in Sources */,
 				B7986CEE29EBF75700A73CB7 /* RMEpisodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
