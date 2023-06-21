@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class CharacterListView: UIView {
-    private let viewModel = CharacterListViewViewModel()
+final class RMCharacterListView: UIView {
+    private let viewModel = RMCharacterListViewViewModel()
     private let spinner:UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
@@ -22,7 +22,7 @@ final class CharacterListView: UIView {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(RMCharacterCollectionViewCell.self, forCellWithReuseIdentifier:RMCharacterCollectionViewCell.cellIdentifier)
         collectionView.isHidden = true
         collectionView.alpha = 0
         return collectionView
